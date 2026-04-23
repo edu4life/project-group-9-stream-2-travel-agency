@@ -277,6 +277,42 @@ nav .menu li:first-child {
   font-size: 1rem;
   font-weight: 500;
 }
+/*for destinaion grid boxes*/
+h1{
+  font-size: 2rem;
+  text-align: center;
+  padding: 20px;
+}
+.destination-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.box{
+  background-color: #0000ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+ 
+}
+.box:hover{
+  background-color: gold;
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+.description{
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+.description li{
+  list-style-type: none;
+}
+
+
+
+
 
 /* RESPONSIVE */
 
@@ -302,6 +338,28 @@ nav .menu li:first-child {
 }
 
 
+/* using mobile first approach for medium screens */
+/* for tabletscreens */
+@media(min-width: 767px){
+  .destination-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+}
+
+
+/* using mobile first approach for medium screens */
+/* for laptop screens */
+@media(min-width: 1023px){
+  .destination-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+}
 
 
 
