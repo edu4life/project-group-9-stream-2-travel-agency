@@ -267,15 +267,66 @@ nav .menu li:first-child {
 
   
 
-/*this section is for destinations styling*/
+/*THIS SECTION IS FOR DESTINATIONS STYLING*/
 /* used same class of home for destinations so it can target it and apply the same code for destinations navigation*/
 
 
 /*for destinaion grid boxes*/
+body{
+  font-family: "Roboto", sans-serif;
+}
+h1, h2, h3{
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo{
+  margin-right: auto;
+  font-size: 25px;
+  font-weight: 700;
+  display:flex;
+  align-items: center;
+  color: white;
+}
+
+.logo span{
+  color: red;
+}
+
+.mobile{
+  width: 100%;
+  background-color: blue;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  position: relative;
+}
+
+.mobile-list {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  background-color: blue;
+  right: 0;
+  display: none;
+}
+.mobile-list a {
+  text-decoration: none;
+  color: white;
+  padding: 10px ;
+  display: block;
+}
+
+button{
+  font-size: 1.5rem;
+}
+
 h1{
   font-size: 2rem;
   text-align: center;
-  padding: 20px;
+  margin-top: 5rem;
+  text-transform: uppercase;
 }
 .destination-container{
   display: grid;
@@ -323,9 +374,10 @@ h1{
   background-color: #ff6b6b;
   color: white;
   transform: translateY(-2px);
- }
-
-
+}
+.desktop{
+  display: none;
+}
 
 
 /* RESPONSIVE */
@@ -352,6 +404,9 @@ h1{
 }
 
 
+
+/* RESPONSIVENESS FOR DESTINATIONS PAGE */
+
 /* using mobile first approach for medium screens */
 /* for tabletscreens */
 @media(min-width: 767px){
@@ -361,6 +416,12 @@ h1{
   gap: 20px;
 }
 
+.mobile{
+display: none;
+}
+.desktop{
+  display: flex;
+}
 }
 
 
@@ -371,6 +432,13 @@ h1{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+.mobile {
+display: none;
+}
+
+.desktop{
+  display: flex;
 }
 
 }
