@@ -70,18 +70,6 @@ nav .menu li:first-child {
 }
 
 
-.sidebar li {
-  width: 100%;
-  list-style-type: none;
-  
-}
-
-.sidebar a {
-  width: 100%;
-}
-
-
-
   section {
     padding: 70px;
   }
@@ -265,13 +253,47 @@ nav .menu li:first-child {
     padding: 20px 10%;
   }
 
+  .menu-button{
+      display: none;
+    }
+
+  /* RESPONSIVE */
+
+@media(max-width: 768px) {
+  
+  .hero-content h1 {
+      font-size: 2.1rem;
+    }
+
+    section{
+      padding: 50px;
+    }
+
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+
+ .group-destination{
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+  .choose-us-group {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    
+}
+
   
 
 /*THIS SECTION IS FOR DESTINATIONS STYLING*/
 /* used same class of home for destinations so it can target it and apply the same code for destinations navigation*/
 
 
-/*for destinaion grid boxes*/
+/*for destinaion grid boxes*
 body{
   font-family: "Roboto", sans-serif;
 }
@@ -380,35 +402,14 @@ h1{
 }
 
 
-/* RESPONSIVE */
-
-@media(max-width: 768px) {
-  
-  .hero-content h1 {
-      font-size: 2.1rem;
-    }
-
-    section{
-      padding: 50px;
-    }
-
- .group-destination{
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-}
-  .choose-us-group {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-    }
-    
-}
 
 
 
-/* RESPONSIVENESS FOR DESTINATIONS PAGE */
 
-/* using mobile first approach for medium screens */
-/* for tabletscreens */
+/* RESPONSIVENESS FOR DESTINATIONS PAGE *
+
+/* using mobile first approach for medium screens *
+/* for tabletscreens *
 @media(min-width: 767px){
   .destination-container{
   display: grid;
@@ -425,8 +426,8 @@ display: none;
 }
 
 
-/* using mobile first approach for medium screens */
-/* for laptop screens */
+/* using mobile first approach for medium screens *
+/* for laptop screens *
 @media(min-width: 1023px){
   .destination-container{
   display: grid;
