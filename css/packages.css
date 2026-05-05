@@ -2,8 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #eeeff1;
+}
+
+h1, h2, h3{
+  font-family: 'Poppins', sans-serif;
+   margin-bottom: 15px;
+}
+
+
+/* styling navbar to be hidden on mobile and show on desktop */
 
   header {
   background-color: red;
@@ -59,29 +72,65 @@ nav .menu li:first-child {
   color: red;
 }
 
+.desktop{
+  display: none;
+}
 
-.sidebar li {
+/* styling nav section to be displayed on mobile and hidden for desktop */
+.logo{
+  margin-right: auto;
+  font-size: 25px;
+  font-weight: 700;
+  display:flex;
+  align-items: center;
+  color: white;
+}
+
+.logo span{
+  color: red;
+}
+
+.mobile{
   width: 100%;
-  list-style-type: none;
-  
+  background-color: blue;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  position: relative;
 }
 
-.sidebar a {
-  width: 100%;
+.mobile-list {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  background-color: blue;
+  right: 0;
+  display: none;
+}
+.mobile-list a {
+  text-decoration: none;
+  color: white;
+  padding: 10px ;
+  display: block;
 }
 
-
-body {
-    background: #f5f5f5;
+button{
+  font-size: 1.5rem;
 }
+
 
 /* HERO */
 .hero {
     background: url('../images/packages.png') no-repeat center/cover;
-    height: 300px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    border-bottom: black 2px solid;
+    margin-bottom: 40px;
 }
 
 .hero-overlay {
@@ -187,10 +236,39 @@ footer {
     bottom: 0;
   }
 
-
-/* RESPONSIVE */
-@media(max-width: 768px) {
-    .hero h1 {
-        font-size: 28px;
-    }
+  /* using mobile first approach for medium screens */
+/* for tabletscreens */
+@media(min-width: 767px){
+  .packages{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
+
+.mobile{
+display: none;
+}
+.desktop{
+  display: flex;
+}
+}
+
+
+/* using mobile first approach for medium screens */
+/* for laptop screens */
+@media(min-width: 1023px){
+  .packages{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.mobile {
+display: none;
+}
+
+.desktop{
+  display: flex;
+}
+
+}
+
