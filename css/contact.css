@@ -195,6 +195,13 @@ button:hover {
   overflow: hidden;
 }
 
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10%;
+  }
+
 /* RESPONSIVE */
 
 @media (max-width: 320px) {
