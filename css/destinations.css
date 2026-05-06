@@ -113,6 +113,10 @@ nav .menu li:first-child {
 button{
   font-size: 1.5rem;
 }
+button:hover {
+background-color: black;
+color: white;
+}
 
 /* styliing hero section */
 .hero{
