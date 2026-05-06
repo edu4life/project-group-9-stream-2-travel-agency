@@ -5,16 +5,12 @@
 }
 
 body {
-  min-height: 100vh;
   font-family: "Roboto", sans-serif;
-  background-color: #eeeff1;
 }
 
 h1, h2, h3{
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 15px;
 }
-
 
 
 /* styling navbar to be hidden on mobile and show on desktop */
@@ -86,6 +82,7 @@ nav .menu li:first-child {
   display:flex;
   align-items: center;
   color: white;
+
 }
 
 .logo span{
@@ -98,9 +95,10 @@ nav .menu li:first-child {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 12px 20px;
   position: relative;
+  height: 50px;
 }
 
 .mobile-list {
@@ -120,7 +118,9 @@ nav .menu li:first-child {
 
 button{
   font-size: 1.5rem;
+  
 }
+
 
 
 /* HERO */
