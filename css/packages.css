@@ -11,9 +11,10 @@ body {
 }
 
 h1, h2, h3{
-  font-family: 'Poppins', sans-serif;
-   margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 15px;
 }
+
 
 
 /* styling navbar to be hidden on mobile and show on desktop */
@@ -30,6 +31,7 @@ nav{
   width: 100%;
   background-color: blue;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  height: 50px;
 
   
 }
