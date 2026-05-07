@@ -60,7 +60,8 @@ nav .menu li:first-child {
   font-size: 25px;
   font-weight: 700;
 }
-  .menu span{
+
+.menu div{
   color: red;
 }
 
@@ -69,7 +70,7 @@ nav .menu li:first-child {
 }
 
 
-/* styling nav section to be displayed on mobile and hidden for desktop */
+/* styling nav section to be displayed on mobile and hidden for desktop section */
 .logo{
   margin-right: auto;
   font-size: 25px;
@@ -80,8 +81,9 @@ nav .menu li:first-child {
   height: 100%;
 }
 
-.logo span{
+.logo div{
   color: red;
+  margin-left: 0;
 }
 
 .mobile{
