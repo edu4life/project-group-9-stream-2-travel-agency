@@ -28,8 +28,6 @@ nav{
   background-color: blue;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 height: 50px;
- text-align: center;
- align-items: center;
   
 }
 
@@ -53,7 +51,7 @@ nav a {
   padding: 0 30px;
   text-decoration: none;
   display:flex;
-  align-items: flex-end;
+  align-items: center;
   color: white;
   transition: background-color 0.4s ease-in-out;
 }
@@ -77,6 +75,7 @@ nav .menu li:first-child {
 }
 
 /* styling nav section to be displayed on mobile and hidden for desktop */
+
 .logo{
   margin-right: auto;
   font-size: 25px;
@@ -84,23 +83,24 @@ nav .menu li:first-child {
   display:flex;
   align-items: center;
   color: white;
-
+  height: 100%;
 }
 
-.logo span{
+.logo div{
   color: red;
+  margin-left: 0;
 }
 
 .mobile{
   width: 100%;
+  height: 50px;
   background-color: blue;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 12px 20px;
   position: relative;
-  height: 50px;
 }
 
 .mobile-list {
@@ -118,9 +118,14 @@ nav .menu li:first-child {
   display: block;
 }
 
-button{
+.btn{
   font-size: 1.5rem;
 }
+.btn :hover {
+background-color: black;
+color: white;
+}
+
 
 
 
@@ -152,15 +157,13 @@ button{
 }
 
 /* PACKAGES */
-.packages {
-    padding: 50px 20px;
-}
-
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
+
 
 /* CARD */
 .card {
@@ -169,8 +172,9 @@ button{
     border-radius: 10px;
     text-align: center;
     position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     transition: 0.3s;
+    border: 1px solid blue;
 }
 
 .card:hover {
@@ -179,7 +183,7 @@ button{
 
 /* MOST POPULAR */
 .popular {
-    border: 2px solid blue;
+    border: 4px solid yellow;
     transform: scale(1.05);
 }
 
@@ -242,7 +246,7 @@ footer {
   /* using mobile first approach for medium screens */
 /* for tabletscreens */
 @media(min-width: 767px){
-  .packages{
+  .container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -260,10 +264,11 @@ display: none;
 /* using mobile first approach for medium screens */
 /* for laptop screens */
 @media(min-width: 1023px){
-  .packages{
+  .container{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+
 }
 .mobile {
 display: none;
