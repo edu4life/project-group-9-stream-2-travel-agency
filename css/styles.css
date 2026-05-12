@@ -132,13 +132,13 @@ nav .menu li:first-child {
     transform: translateY(-2px);
   }
 
-  /* INTRO */
+   /*INTRO */
   .introduction {
-    max-width: 800px;
-    margin: auto;
-    text-align: justify;
+  max-width: 800px;
+  margin: auto;
+  text-align: justify;
 
-  
+
   }
 
   .introduction h2{
@@ -147,13 +147,15 @@ nav .menu li:first-child {
   }
 
   .introduction p {
+    text-align: center;
     margin-bottom: 10px;
-    color:green;
+    text-align:justify;
+  
   }
 
   /* DESTINATIONS */
   .destinations {
-    background: rgb(75, 0, 130, 0.4);
+    background: rgb(21, 21, 119);
     text-align: center;
   }
 
@@ -173,9 +175,10 @@ nav .menu li:first-child {
     width: 90%;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    box-shadow: 4px 7px 16px 2px rgb(255, 255, 255, 0.2);
     transition: 0.3s;
     margin: 0 auto;
+    background: rgb(21, 21, 119);
   }
 
   .destination:hover {
@@ -184,18 +187,33 @@ nav .menu li:first-child {
 
   .destination img {
     width: 100%;
-    height: 170px;
+    height: 333px;
     object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  
   }
 
   .destination h3 {
     padding: 15px;
+    color:rgb(255, 255, 255, 0.8);
+    
   }
 
   /* WHY CHOOSE US */
-  #why-choose-us {
+  .why-choose-us {
     text-align: center;
+    background: rgb(21, 21, 119, 0.8);
+  
   }
+  .why-choose-us h2{
+    color: white;
+  }
+  .why-choose-us h3{
+   color: rgb(255, 255, 255, 0.8);
+  }
+  
+  
 
   .choose-us-group{
     display: grid;
@@ -204,37 +222,40 @@ nav .menu li:first-child {
     gap: 20px;
   }
 
-  #why-choose-us .reason {
+  .why-choose-us .reason {
     width: 90%;
-    background: rgb(255, 215, 0, 0.4);
+    background-color:rgb(40, 145, 145);
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     transition: 0.3s;
     margin: 0 auto;
   }
 
+
+
   .reason:hover {
     transform: translateY(-5px);
   }
 
-  .icon {
-    font-size: 35px;
-    margin-bottom: 10px;
-    display: block;
+  .reason i{
+    font-size: 25px;
+    margin: 10px;
   }
+ 
 
   /* TESTIMONIALS */
-  #testimonials {
-    background: #f1f1f1;
+  .testimonials {
     text-align: center;
+    background: rgb(21, 21, 119, 0.5);
   }
+
 
   blockquote {
     max-width: 500px;
     margin: 20px auto;
     padding: 25px;
-    background: #fff;
-    border-left: 6px solid #ff6b6b;
+    background-color: rgb(255, 255, 255, 0.8);
+    border-left: 6px solid rgb(0, 128, 0,0.8);
     border-radius: 8px;
     font-style: italic;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -288,161 +309,6 @@ nav .menu li:first-child {
 }
 
   
-
-/*THIS SECTION IS FOR DESTINATIONS STYLING*/
-/* used same class of home for destinations so it can target it and apply the same code for destinations navigation*/
-
-
-/*for destinaion grid boxes*
-body{
-  font-family: "Roboto", sans-serif;
-}
-h1, h2, h3{
-  font-family: "Montserrat", sans-serif;
-}
-
-.logo{
-  margin-right: auto;
-  font-size: 25px;
-  font-weight: 700;
-  display:flex;
-  align-items: center;
-  color: white;
-}
-
-.logo span{
-  color: red;
-}
-
-.mobile{
-  width: 100%;
-  background-color: blue;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  position: relative;
-}
-
-.mobile-list {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  background-color: blue;
-  right: 0;
-  display: none;
-}
-.mobile-list a {
-  text-decoration: none;
-  color: white;
-  padding: 10px ;
-  display: block;
-}
-
-button{
-  font-size: 1.5rem;
-}
-
-h1{
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 5rem;
-  text-transform: uppercase;
-}
-.destination-container{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-.box{
-  background-color: #3f3fc9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 15px;
- 
-}
-.box:hover{
-  background-color: black;
-  transform: translateY(-5px);
-  transition: 0.3s ease;
-}
-.description{
-  color: white;
-  padding: 15px;
-  text-align: center;
-}
-.description li{
-  list-style-type: none;
-}
-.box img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-.description button,span{
-  display: block;
-  margin: 15px auto;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-.description span{
-  font-weight: bold;
-  font-size: larger;
-  color: yellow;
-}
- .description button:hover{
-  background-color: #ff6b6b;
-  color: white;
-  transform: translateY(-2px);
-}
-.desktop{
-  display: none;
-}
-
-
-
-
-
-
-/* RESPONSIVENESS FOR DESTINATIONS PAGE *
-
-/* using mobile first approach for medium screens *
-/* for tabletscreens *
-@media(min-width: 767px){
-  .destination-container{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.mobile{
-display: none;
-}
-.desktop{
-  display: flex;
-}
-}
-
-
-/* using mobile first approach for medium screens *
-/* for laptop screens *
-@media(min-width: 1023px){
-  .destination-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.mobile {
-display: none;
-}
-
-.desktop{
-  display: flex;
-}
-
-}
 
 
 
